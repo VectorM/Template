@@ -1,0 +1,165 @@
+/*reset*/
+body, html {
+	font: 12px/20px $font-main;
+	color:#010101;
+	margin: 0;
+	height:100%;
+	
+}
+select, input, textarea {	
+	font:100% Arial, Helvetica, sans-serif;
+	outline:none;
+}
+a {
+	color:$color-link;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+strong {
+	font-weight: normal;
+	font-family: $font-bold;
+}
+.page {
+	position:relative;
+	overflow:hidden;
+	min-height:100%;
+}
+#wrapper{
+	width: 922px;
+	margin: 0 auto;
+}
+/*general*/
+header{
+	padding: 33px 0 0;
+	@include clearfix;
+
+	
+	.header-bar{
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 28px;
+		@include clearfix;
+		
+		.header-column{
+			width: 40%;
+
+			&:first-child{
+				float: left;
+				padding-left: 0;
+			}
+			&:nth-child(2){
+				float: right;
+			}
+
+			ul.nav-left{
+
+				@include clearfix;
+
+				li{
+					background: url(../images/separator.png) 8px 50% no-repeat;
+					float: left;
+					padding-left: 19px;
+					
+					&:first-child{
+						background: none;
+						padding-left: 0;
+					}
+
+					a{
+						font-size: 11px;
+					}
+
+				}
+			}
+			ul.nav-right{
+				float: right;
+				@include clearfix;
+
+				li{
+					float: right;
+					padding-left: 10px;
+					background: url(../images/stick.png) 0 50% no-repeat;
+					
+					&:nth-child(2){
+						background: none;
+						padding-right: 10px;
+					}
+
+					a{
+						float: left;
+
+						img{
+							margin:2px 4px 0 0;
+							float: left;
+						}
+					}
+				}
+			}
+
+			div{
+				padding-top: 5px;
+				float: right;
+				
+				a.home-delivery{
+					color:#729967;
+					font-family: $font-brand;
+				}
+			}
+		}
+
+		.logo{
+			display: block;
+			text-indent:-9999px;
+			overflow:hidden;
+			width:160px;
+			height: 40px;
+			background: url(../images/logo.png) no-repeat;
+				
+			a{
+				display:block;
+				height:100%;
+			}
+		}	
+	}
+
+	.navbar{
+		overflow: hidden;
+		width: 90%;
+		margin: 0 auto;
+
+		ul{
+			padding:1% 0;
+			overflow: hidden;
+
+			li{
+				padding-left:4.5%;
+				float: left;
+		
+				&:first-child{
+					padding-left: 0;
+				}
+
+				a{
+				}
+			}
+		}
+	}
+}
+
+#gallery{
+	padding-bottom: 30px;
+}
+h2{
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font:$font-title;
+	color:$color-link-black;
+	font-size: 19px;
+}
+h2 span{
+	display: block;
+	font-size: 11px;
+	color:#595959;
+}

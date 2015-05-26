@@ -1,0 +1,73 @@
+@media screen and (max-width:768px) {
+	.page{
+		width: 768px;
+	}
+
+	header{
+		position: relative;
+		z-index: 2;
+	
+		.navbar{
+			width: 25%;
+			background: #fff;
+			padding: 0 0 9999px;
+			margin: 0 0 -9999px;
+			background: #fff;
+			float: left;
+			display: none;
+			position: absolute;
+			top:0;
+			left: 0; 
+			border: 1px solid #f00;
+
+
+			ul{
+
+				li{
+					width: 100%;
+					padding: 0;
+					margin: 5px 0;
+					text-align: center;
+					a{
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.logotype{
+			float: right;
+			width: 300px;
+			height: 100px;
+			margin-right: 150px;
+		}
+		.mobile-trigger:hover{
+			.navbar {
+				display: block;
+			}
+		}
+		.menu-show{
+			display: block;
+
+			&:hover + nav.navbar{
+				display: block;
+			}
+		}
+	}
+	.tabs section{
+		padding: 7px;
+		width: 525px;
+	}
+	.column-holder div ol li .list-item-before, 
+	.column-holder div ol li:before{
+		margin: 16px 0 -30px 272px;
+	}
+	.column-holder{
+		
+		display: block;
+
+		div{
+			margin:20px 0;
+			width: 100%;
+		}
+	}
+}

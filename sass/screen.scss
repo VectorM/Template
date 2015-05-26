@@ -1,0 +1,18 @@
+/*compass imports*/
+@import "compass/reset";
+@import "compass/css3/box-shadow";
+
+/*modules & stuff*/
+@import "modules/fonts";
+@import "modules/elements";
+@import "modules/colors";
+
+
+/*pages*/
+@import "pages/main";
+/*vendor*/
+@import "modules/vendor/jquery.fancybox";
+
+/*media*/
+@import "media/print";
+@import "media/responsive";

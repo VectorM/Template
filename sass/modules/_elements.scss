@@ -1,0 +1,44 @@
+/*mixins*/
+@mixin clearfix() {
+	
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/*colors*/
+$color-button:#e47600;
+$color-link:#03426d;
+$color-link-black:#2a2a2a;
+/*texts*/
+$font-main:'open_sansregular', Arial, Helvetica, sans-serif;
+$font-bold:'open_sansbold', Arial, Helvetica, sans-serif;
+$font-brand:'volkhovregular', Times, "Times New Roman", serif;
+$font-title:'montserratregular', Arial, Helvetica, sans-serif;
+
+/*buttons*/
+
+.btn{
+	background: $color-button;
+	outline: none;
+	@include border-radius(4px);
+	font-family: $font-bold;
+	color:#fff;
+	padding:15px 15px 13px;
+	text-align: center;
+	min-width: 110px;
+}
+.ar {
+	text-align:right;
+}
+.al {
+	text-align:left;
+}
