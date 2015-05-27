@@ -74,9 +74,11 @@ header{
 			}
 			ul.nav-right{
 				float: right;
+
 				@include clearfix;
 
 				li{
+					position: relative;
 					float: right;
 					padding-left: 10px;
 					background: url(../images/stick.png) 0 50% no-repeat;
@@ -107,20 +109,6 @@ header{
 				}
 			}
 		}
-
-		.logo{
-			display: block;
-			text-indent:-9999px;
-			overflow:hidden;
-			width:160px;
-			height: 40px;
-			background: url(../images/logo.png) no-repeat;
-				
-			a{
-				display:block;
-				height:100%;
-			}
-		}	
 	}
 
 	.navbar{
@@ -154,12 +142,237 @@ h2{
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	font:$font-title;
+	font-family:$font-title;
 	color:$color-link-black;
 	font-size: 19px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 17px;
+	margin-bottom: 14px;
 }
 h2 span{
 	display: block;
 	font-size: 11px;
 	color:#595959;
+}
+#content{
+	overflow: hidden;
+}
+.column-holder{
+	padding-bottom: 48px;
+	text-align: center;
+
+	ul{
+		@include flexbox;
+			justify-content: space-around;
+		list-style: none;
+		margin: 0;
+		padding: 0 0 23px;
+		
+		@include clearfix;
+
+		li{
+			margin:auto;
+			text-align: center;
+
+			a{
+				height: 100%;
+				overflow: hidden;
+
+				img{
+					vertical-align: top;
+				}
+			}
+
+			.shirt-price{
+				font-size: 13px;
+				line-height: 17px;
+				display: block;
+				width: 74%;
+				margin: 0 auto;
+				padding: 17px 0 9px;
+			}
+		}
+
+	}
+}
+.column-holder.three{
+
+	ul{
+
+		li{
+			position: relative;
+			margin: auto;
+
+
+			&:first-child{
+				padding-left: 0;
+			}			
+			&:first-child span{
+				text-align: right;
+			}
+			&:nth-child(2) h3{
+				color:#fff;
+			}
+			&:nth-child(2) span{
+				color:#b2d2d4;
+				text-align: left;
+			}
+			a{
+				color: #484158;
+				position: relative;
+
+				img {
+					vertical-align: top;
+				}
+				h3{
+					text-align: left;
+					width: 50%;
+					top:26px;
+					left:23px;
+					position: absolute;
+					font-family: $font-title;
+					color:inherit;
+					font-size: 18px;
+				}
+				span{
+					width: 40%;
+					position: absolute;
+					top: 70px;
+					left: 35px;
+					color:inherit;
+				}
+			}
+
+			.btn{
+				height: auto;
+				min-width: 70px;
+				color:#fff;
+				right:20px;
+				bottom: 17px;
+				padding: 9px 15px 8px;
+				position: absolute;
+
+				&:hover{
+					background: $color-link-black;
+				}
+			}
+		}
+	}
+}
+.signup-holder{
+	border-top:1px solid #dddddd;
+	padding:27px 0 23px;
+	@include clearfix;
+
+	.sign-form{
+		padding: 6px 0;
+		width: 46%;
+		float: left;
+		border-right: 1px solid #dedede;
+		padding-left: 65px;
+		background: url(../images/mail.png) 0 50% no-repeat;
+		
+		span{
+			display: block;
+			padding: 3px 0;
+			color:$color-link-black;
+			font-size: 13px;
+		}
+
+		.form-holder{
+			width: 85%;
+			border:1px solid #dedede;
+			padding: 4px 10px 4px 9px;
+			
+			input{
+				background: none;
+				border:none;
+			}
+			input[type=submit]{
+				float: right;
+				border-left: 1px solid #dedede;
+			}
+		}
+	}
+
+	.ship-free{
+		width: 44%;
+		float: left;
+		background: url(../images/drive-mail.png) 36px 50% no-repeat;
+		
+		span{
+			padding: 22px 0;
+			margin-left: 100px;
+			display: block;
+			font-family: $font-brand;
+		}	
+	}
+}
+footer{
+	border-top: 8px solid #dddddd;
+	padding:29px 0 36px;
+
+	@include clearfix;
+
+	nav.footer_nav{
+		float: left;
+		width: 70%;
+
+		ul{
+			padding-left: 6%;
+			float: left;
+			
+			li{
+				padding: 2% 0;
+				color:$color-link-black;
+			}
+
+			&:first-child{
+			padding-left:0;
+			font-family: $font-bold;
+			text-transform: uppercase;
+
+				li{
+					color:inherit;
+					font-family: inherit;
+					text-transform: inherit;
+				}
+			}
+
+			.lead-list a{
+				text-transform: uppercase;
+				font-family: $font-bold;
+			}
+			.icons-fb,
+			.icons-tw{
+				width: 16px;
+				height: 16px;
+				display: block;
+				float: left;
+			}
+			.icons-tw{
+				margin-left: 5px;
+			}
+		}
+	}
+}
+.copyright{
+	width: 15%;
+	padding-left: 15%;
+	float: right;
+	@include clearfix;
+
+
+	.logo{
+		float: right;
+		background: url(../images/small-logo.png) no-repeat;
+		width: 127px;
+		height: 32px;
+	}
+	span{
+		font-size: 10px;
+		color:#595959;
+		text-align: right;
+		display: block;
+	}
 }

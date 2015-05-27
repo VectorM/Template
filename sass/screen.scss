@@ -6,12 +6,14 @@
 @import "modules/fonts";
 @import "modules/elements";
 @import "modules/colors";
+@import "modules/sprites";
 
 
 /*pages*/
 @import "pages/main";
 /*vendor*/
 @import "modules/vendor/jquery.fancybox";
+@import "modules/vendor/owl.carousel";
 
 /*media*/
 @import "media/print";

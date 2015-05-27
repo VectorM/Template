@@ -12,4 +12,9 @@ $(document).ready(function() {
       openEffect  : 'none',
       closeEffect : 'none'
   });
+
+  $(".cart-trigger").on('click', function(){
+    $('.drop').slideToggle();
+    return false;
+  });
 });

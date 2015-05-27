@@ -8,6 +8,14 @@
 	}
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -25,7 +33,11 @@ $font-brand:'volkhovregular', Times, "Times New Roman", serif;
 $font-title:'montserratregular', Arial, Helvetica, sans-serif;
 
 /*buttons*/
-
+.shirt-price{
+	color:#595959;
+	font-family: $font-bold;
+	font-size: 13px;
+}
 .btn{
 	background: $color-button;
 	outline: none;
@@ -35,10 +47,65 @@ $font-title:'montserratregular', Arial, Helvetica, sans-serif;
 	padding:15px 15px 13px;
 	text-align: center;
 	min-width: 110px;
+
+	&:hover{
+		color:$color-button;
+		background: #fff;
+	}
+}
+.logo{
+	display: block;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:160px;
+	height: 40px;
+	background: url(../images/logo.png) no-repeat;
+		
+	a{
+		display:block;
+		height:100%;
+	}
+}	
+.txt-holder{
+	overflow: hidden;
+	
+	input{
+		float: left;
+		width: 100%;
+	}
 }
 .ar {
 	text-align:right;
 }
 .al {
 	text-align:left;
+}
+
+.drop {
+	position: absolute;
+	display: none;
+	top: 100%;
+	right: 0;
+	background: #fff;
+	width: 270px;
+	height: 373px;
+	z-index: 2;
+	border: 1px solid #c6c6c6;
+	-webkit-box-shadow: 1px 1px 4px 3px rgba(242,242,242,0.75);
+	-moz-box-shadow: 1px 1px 4px 3px rgba(242,242,242,0.75);
+	box-shadow: 1px 1px 4px 3px rgba(242,242,242,0.75);
+
+	.drop-info-holder{
+		float: none !important;
+		width: 90%;
+		margin:0 auto;
+		
+		.lead-drop-info{
+			display: block;
+			border-bottom: 1px solid #dddddd;
+			font-family: $font-title;
+			color:#010101;
+			font-weight: bold;	
+		}
+	}
 }
