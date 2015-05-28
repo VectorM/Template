@@ -26,12 +26,54 @@
 $color-button:#e47600;
 $color-link:#03426d;
 $color-link-black:#2a2a2a;
+$color-border:#ddd;
 /*texts*/
 $font-main:'open_sansregular', Arial, Helvetica, sans-serif;
 $font-bold:'open_sansbold', Arial, Helvetica, sans-serif;
 $font-brand:'volkhovregular', Times, "Times New Roman", serif;
 $font-title:'montserratregular', Arial, Helvetica, sans-serif;
+$font-semibold:'open_sanssemibold',Arial, Helvetica, sans-serif;
+/*breadcrumbs*/
+.headline{
+	padding: 23px 0 19px 25px;
+	margin-bottom: 28px;
+	background:$color-border;
 
+	h1{
+		font-size: 23px;
+		color:#837f7a;
+		font-family: $font-title;
+	}
+}
+ul.breadcrumbs{
+	@include clearfix;
+
+	li{
+		color:#535353;
+		font-size: 10px;
+		padding-left: 18px;
+		background: url(../images/breadcrumbs-arrow.png) 8px 5px no-repeat;
+		float: left;
+	
+		&:first-child{
+			background: none;
+			padding-left: 0;
+		}
+
+		a{
+			font-size: inherit;
+		}
+	}
+}
+
+
+.lead-list{
+	text-transform: uppercase;
+	font-family: $font-bold;
+	color:$color-link-black;	
+}
+/*borders*/
+$border-bot:1px solid $color-border;
 /*buttons*/
 .shirt-price{
 	color:#595959;
@@ -102,10 +144,45 @@ $font-title:'montserratregular', Arial, Helvetica, sans-serif;
 		
 		.lead-drop-info{
 			display: block;
-			border-bottom: 1px solid #dddddd;
+			border-bottom: 1px solid $color-border;
 			font-family: $font-title;
 			color:#010101;
 			font-weight: bold;	
+		}
+	}
+}
+.pagination{
+	float: right;
+
+	.pagination-list{
+		@include clearfix();
+
+		li{
+			padding-right: 3px;
+			color:#313131;
+			float: left;
+
+			a{
+				color:inherit;
+			}
+
+			&:hover a{
+				color:#4494b6;
+			}
+		}
+		
+		li.active a{
+			color:#4494b6;
+		}
+		.previous{
+			cursor: pointer;
+			padding:0 9px;
+			background: url(../images/pag-prev.png) 0 50% no-repeat;
+		}
+		.next{
+			cursor: pointer;
+			padding:0 9px;
+			background: url(../images/pag-next.png) right 50% no-repeat;
 		}
 	}
 }

@@ -7,7 +7,12 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/owl.carousel.js"></script>
+    <script src="js/custom-form.js"></script>
+    <script src="js/custom-form.select.js"></script>
+    <script src="js/custom-form.checkbox.js"></script>
     <script src="js/scripts.js"></script>
+
+
 	<title>Training Project</title>
 	<!--[if IE]>
 		<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -66,9 +71,296 @@
                     </ul>
                 </nav><!-- navbar -->
             </header><!-- header -->
+            <div class="headline">
+            	<h1>COLLECTION</h1>
+            	<ul class="breadcrumbs">
+            		<li><a href="">HOME</a></li>
+            		<li>COLLECTION</li>
+            	</ul>
+            </div><!-- breadcrumbs -->
             <div id="content">
-                
+	            <aside>
+	            	<div class="category-holder">
+	            		<div class="aside-box">
+	            			<ul>
+	            				<li class="lead-list"><a href="">SHIRTS</a></li>
+	            				<li><a href="">Formal</a></li>
+	            				<li><a href="">Casual</a></li>
+	            				<li><a href="">Club Wear</a></li>
+	            				<li><a href="">Black & White</a></li>
+	            			</ul>
+	            		</div>
+	            		<div class="aside-box">
+							<div class="title-aside">
+								<span>REFINE RESULTS</span>
+								<a class="close-button" href="">Clear All</a>
+							</div>
+							<span class="lead-list semi">Selected Filter</span>
+							<div class="select-filter">
+								<span>0 to 1000</span>
+								<a href=""></a>
+							</div>
+							<div class="select-filter">
+								<span>Shirt type: Long Sleeves</span>
+								<a href=""></a>
+							</div>
+							<div class="select-filter">
+								<span>Colour: Black</span>
+								<a href=""></a>
+							</div>
+	            		</div>
+	            		<div class="aside-box">
+	            			<span class="lead-list">PRICE</span>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-all-price">
+								<label for="checkbox-all-price">All</label>
+							</div>
+		            		<div class="check-holder">
+		        				<input type="checkbox" id="checkbox-1000">
+		            			<label for="checkbox-1000">o - Rs.1000</label>
+		            		</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-2000">
+								<label for="checkbox-2000">Rs.1001 to Rs.2000</label>
+							</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-3000">
+								<label for="checkbox-3000">Rs. 2001 to Rs.3000</label>
+							</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-4000">
+								<label for="checkbox-4000">Rs. 3001 to Rs.4000</label>
+							</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-21000">
+								<label for="checkbox-21000">Rs.4001 to Rs. 10,000</label>
+							</div>
+	            		</div>
+	            		<div class="aside-box">
+	            			<span class="lead-list">SHIRT TYPE</span>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-all-shirt">
+								<label for="checkbox-all-shirt">All</label>
+							</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-long">
+								<label for="checkbox-long">Long Sleeves</label>
+							</div>
+							<div class="check-holder">
+								<input type="checkbox" id="checkbox-short">
+								<label for="checkbox-short">Short Sleeves</label>
+							</div>
+	            		</div>
+	            		<div class="aside-box">
+	            			<span class="lead-list">COLOUR</span>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-all-colour">
+	            				<label for="checkbox-all-colour">All</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-red">
+	            				<label for="checkbox-red">RED</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-blue">
+	            				<label for="checkbox-blue">BLUE</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-green">
+	            				<label for="checkbox-green">GREEN</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-yellow">
+	            				<label for="checkbox-yellow">YELLOW</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-orange">
+	            				<label for="checkbox-orange">ORANGE</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-purple">
+	            				<label for="checkbox-purple">PURPLE</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-black">
+	            				<label for="checkbox-black">BLACK</label>
+	            			</div>
+	            			<div class="check-holder">
+	            				<input type="checkbox" id="checkbox-white">
+	            				<label for="checkbox-white">WHITE</label>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </aside><!-- aside -->
+	            <div class="main-content">
+	            	<div class="select-product-box">
+	            		<select class="sel" name="price-select" id="pr-select">
+	            			<option value="h-l">Price High to Low</option>
+	            			<option selected="selected" value="l-h">Price Low to High</option>
+	            			<option value="sl">Sale</option>
+	            		</select>
+	            		<select  class="sel" >
+	            			<option value="h-l">Price High to Low</option>
+	            			<option selected="selected" value="l-h">Price Low to High</option>
+	            			<option value="sl">Sale</option>
+	            		</select>
+	            		<div class="pagination">
+	            			<ul class="pagination-list">
+		            			 <li class="previous">PREVIOUS</li>
+		            			 <li>1</li>
+		            			 <li><a href="">2</a></li>
+		            			 <li><a href="">3</a></li>
+		            			 <li class="active"><a href="">4</a></li>
+		            			 <li><a href="">5</a></li>
+		            			 <li><a href="">6</a></li>
+		            			 <li><a href="">7</a></li>
+		            			 <li class="next"><a href="">NEXT</a></li>
+	            			</ul>
+	            		</div>
+	            	</div><!-- select-product-box -->
+	            	<div class="gallery-column">
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-1.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-1.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-2.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-2.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-3.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-3.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-1.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-1.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-2.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-2.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-3.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-3.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-1.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-1.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-2.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-2.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            		<div class="items-gallery">
+	            			<a href="images/gallery-gay-3.png" class="fancybox" rel="gallery4">
+	            				<img src="images/gallery-gay-3.png" alt="">
+	            				<span class="short-link">Van Heusen Easy Care Fit Herringbone Shirt</span>
+	            				<span class="shirt-price">Rs.1,800.00</span>
+	            				<span class="hover"></span>
+	            			</a>
+	            		</div>
+	            	</div><!-- gallery-column-block -->
+	        		<div class="pagination">
+	        			<ul class="pagination-list">
+	            			 <li class="previous">PREVIOUS</li>
+	            			 <li>1</li>
+	            			 <li><a href="">2</a></li>
+	            			 <li><a href="">3</a></li>
+	            			 <li class="active"><a href="">4</a></li>
+	            			 <li><a href="">5</a></li>
+	            			 <li><a href="">6</a></li>
+	            			 <li><a href="">7</a></li>
+	            			 <li class="next"><a href="">NEXT</a></li>
+	        			</ul>
+	        		</div>
+	            </div><!-- main-content -->
             </div><!-- content -->
+            <div class="column-holder">
+            <h2>Recently viewed</h2>
+                <ul>
+                    <li>
+                        <a class="fancybox" rel="gallery1" href="images/guy-1.jpg">
+                            <img src="images/guy-1.jpg" alt="">
+                        </a>
+                        <a href="">Van Heusen Easy Care Fit Herringbone Shirt</a>
+                        <span class="shirt-price">Rs.1,800.00</span>
+                    </li>
+                    <li>
+                        <a class="fancybox" rel="gallery1" href="images/guy-2.jpg">
+                            <img src="images/guy-2.jpg" alt="">
+                        </a>
+                        <a href="">Van Heusen Easy Care Fit Herringbone Shirt</a>
+                        <span class="shirt-price">Rs.1,800.00</span>
+                    </li>
+                    <li>
+                        <a class="fancybox" rel="gallery1" href="images/guy-3.jpg">
+                            <img src="images/guy-3.jpg" alt="">
+                        </a>
+                        <a href="">Van Heusen Easy Care Fit Herringbone Shirt</a>
+                        <span class="shirt-price">Rs.1,800.00</span>
+                    </li>
+                    <li>
+                        <a class="fancybox" rel="gallery1" href="images/guy-4.jpg">
+                            <img src="images/guy-4.jpg" alt="">
+                        </a>
+                        <a href="">Van Heusen Easy Care Fit Herringbone Shirt</a>
+                        <span class="shirt-price">Rs.1,800.00</span>
+                    </li>
+                    <li>
+                        <a class="fancybox" rel="gallery1" href="images/guy-5.jpg">
+                            <img src="images/guy-5.jpg" alt="">
+                        </a>
+                        <a href="">Van Heusen Easy Care Fit Herringbone Shirt</a>
+                        <span class="shirt-price">Rs.1,800.00</span>
+                    </li>
+                </ul>
+            </div><!-- column-holder -->
+            <div class="signup-holder">
+                <div class="sign-form">
+                    <span>SIGNUP TO WIN Rs.10,000/- GIFT VOUCHER</span>
+                    <div class="form-holder">
+                        <input type="submit" value="submit">
+                        <div class="txt-holder">
+                            <input required type="text" name="e-mail" placeholder="Enter email address">
+                        </div>
+                    </div>
+                </div>
+                <div class="ship-free">
+                    <span>FREE SHIPPING ON ALL ORDERS ABOVE Rs.5000/-</span>
+                </div>            
+            </div><!-- signup-holder -->
             <footer>
              <nav class="footer_nav">
                 <ul>

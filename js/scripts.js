@@ -17,4 +17,17 @@ $(document).ready(function() {
     $('.drop').slideToggle();
     return false;
   });
+
+  $("body").click(function(){
+    $(".dropup").fadeOut().removeClass("active");
+  });
+
+  // Prevent events from getting pass .popup
+  $(".popup").click(function(e){
+    e.stopPropagation();
+  });
 });
+
+customForm.lib.domReady(function(){
+    customForm.customForms.replaceAll();
+   });
