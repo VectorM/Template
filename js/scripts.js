@@ -19,11 +19,11 @@ $(document).ready(function() {
   });
 
   $("body").click(function(){
-    $(".dropup").fadeOut().removeClass("active");
+    $(".drop").fadeOut();
   });
 
   // Prevent events from getting pass .popup
-  $(".popup").click(function(e){
+  $(".drop").click(function(e){
     e.stopPropagation();
   });
 
@@ -96,6 +96,14 @@ $(document).ready(function() {
     }
     
   }
+
+  $(function() {
+     $( "#accordion" ).accordion();
+   });
+
+  $(function() {
+     $( "#tabs" ).tabs();
+   });  
 
 
 });

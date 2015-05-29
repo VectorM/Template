@@ -66,8 +66,10 @@ ul.breadcrumbs{
 	}
 }
 .social-link{
+	@include clearfix;
 
 	li{
+		float: left;
 		padding-left: 5px;
 
 		&:first-child{
@@ -77,11 +79,10 @@ ul.breadcrumbs{
 }
 .icons-fb,
 .icons-tw,
-.icons-mail{
+.icons-ml{
 	width: 16px;
 	height: 16px;
 	display: block;
-	float: left;
 }
 
 .lead-list{
@@ -92,6 +93,15 @@ ul.breadcrumbs{
 /*borders*/
 $border-bot:1px solid $color-border;
 /*buttons*/
+.cross-close{
+	background:url(../images/cross-button-big.png.) no-repeat;
+	width:18px;
+	display: block;
+	position: absolute;
+	top:1px;
+	right:1px;
+	height:18px;
+}
 .shirt-price{
 	color:#595959;
 	font-family: $font-bold;
@@ -110,6 +120,23 @@ $border-bot:1px solid $color-border;
 	&:hover{
 		color:$color-button;
 		background: #fff;
+	}
+}
+.label-span{
+	float: left;
+}
+.check-holder{
+	padding-top: 13px;
+	float: left;
+	clear: both;
+
+	label{
+		color:#010101;
+		font-family: $font-title;
+	}
+
+	&:first-child{
+		padding-top:0;
 	}
 }
 .logo{
@@ -133,13 +160,34 @@ $border-bot:1px solid $color-border;
 		width: 100%;
 	}
 }
-.ar {
-	text-align:right;
-}
-.al {
-	text-align:left;
-}
+.radio-holder{
+	@include clearfix;
 
+	.row-single{
+		padding-left: 18px;
+		float: left;
+		overflow: hidden;
+
+		&:first-child{
+			padding-left: 0;
+		}
+		label{
+			width: auto;
+			font-size: 12px;
+			line-height: 17px;
+		}
+		span{
+			padding-bottom: 0 !important;
+		}
+	}
+}
+.sucess-btn{
+	margin-left: 6px;
+	float: left;
+	background: url(../images/sucess-btn.png) no-repeat;
+	width: 24px;
+	height: 24px;
+}
 .drop {
 	position: absolute;
 	display: none;
@@ -155,6 +203,7 @@ $border-bot:1px solid $color-border;
 	box-shadow: 1px 1px 4px 3px rgba(242,242,242,0.75);
 
 	.drop-info-holder{
+		position: relative;
 		float: none !important;
 		width: 90%;
 		margin:0 auto;
@@ -166,6 +215,37 @@ $border-bot:1px solid $color-border;
 			color:#010101;
 			font-weight: bold;	
 		}
+	}
+}
+.item-card{
+	border-bottom: $border-bot;
+	padding-bottom: 15px;
+	@include clearfix;
+
+	span{
+		text-align: center;
+		display: block;
+	}
+	.shirt-price{
+		padding-left: 20px;
+		float: left;
+	}
+	.quality{
+		padding-left: 20px;
+		float: left;
+	}
+}
+.drop-our-price{
+	margin: 20px 0;
+	float: left !important;
+	width: 100%;
+
+	@include clearfix;
+	strong{
+		float: left;
+	}
+	span{
+		float: right;
 	}
 }
 .pagination{
@@ -202,4 +282,90 @@ $border-bot:1px solid $color-border;
 			background: url(../images/pag-next.png) right 50% no-repeat;
 		}
 	}
+}
+#accordion{
+	padding-bottom: 31px;
+	
+	h3{
+		background:#fbfbfb url(../images/acc-on.png) 98% 50% no-repeat;
+		text-transform: uppercase;
+		border:1px solid #dfdfdf;
+		color:#595959;
+		cursor: pointer;
+		font-family:$font-semibold;
+		padding-left: 15px;
+		
+		&:focus,
+		&:active{
+			outline: none;
+		}
+	}
+	h3.ui-state-active{
+		background:#fbfbfb url(../images/acc-off.png) 98% 50% no-repeat;
+	}
+	div{
+		border:1px solid #dfdfdf;
+		padding:15px 18px 0 15px;	
+
+		p{
+			padding-bottom: 29px;
+		}
+		ul{
+			padding-bottom: 10px;
+		}
+	}
+}
+#tabs{
+	border:$border-bot;
+
+	ul{
+		@include clearfix;
+		background:#fafafa;
+		border-bottom: $border-bot;
+
+		li{
+			padding:9px 11px;
+			float: left;
+			
+			a{
+				color:#595959;
+				font-family: $font-semibold;
+				
+				&:focus,
+				&:active{
+					outline: none;
+				}
+			}
+
+			&:hover a{
+				text-decoration: none;
+			}
+			&:focus,
+			&:active{
+				outline: none;
+			}
+
+		}
+		.ui-tabs-active{
+			position: relative;
+			top: 1px;
+			padding:10 11px;
+			background:#fff;
+			border-left:$border-bot;
+			border-right:$border-bot;
+
+			&:first-child{
+				border-left: none;
+			}
+		}
+	}
+	
+	div{
+	padding:25px 0 0 18px;
+		
+		p{
+			padding-bottom: 20px;
+		}
+	}
+	
 }

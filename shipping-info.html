@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/custom-form.js"></script>
+    <script src="js/custom-form.select.js"></script>
+    <script src="js/custom-form.checkbox.js"></script>
+    <script src="js/custom-form.radio.js"></script>
+    <script src="js/scripts.js"></script>
+	<title>Training Project</title>
+	<!--[if IE]>
+		<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+</head>
+<body>
+    <div class="page">
+        <div id="wrapper">
+            <header>
+                <div class="header-bar">
+                    <div class="header-column">
+                        <span>CALL <strong>1800.999.777</strong></span>
+                    </div>
+                    <div class="header-column">
+                        <div>
+                            <a class="home-delivery" href="">
+                                <img src="images/car-icon.png" alt="" width="14" height="12">
+                                FREE HOME DELIVERY
+                            </a>
+                        </div>
+                    </div>
+                    <strong class="logo">
+                        <a href="">JADEBLUE</a>
+                    </strong>
+                </div><!-- header-bar -->
+            </header><!-- header -->
+            <div class="headline-form">
+             <div class="headline-form-title">
+                 <span>Fields marked with * are compulsary.</span>
+                 <h1>Alredy Registered user? <a href="#">Login here</a> for Express checkout</h1>
+             </div>
+             <a class="ssl-on" href="#">SSL Secured</a>
+            </div><!-- headline-form -->
+            <div class="shipping-info">
+                <div class="order-form">
+                    <div class="contact-info">
+                        <div class="billing-info"><!-- billing info-->
+                            <div class="step-one">
+                                <h2><span class="number">1.</span>Billing Information</h2>
+                                <div class="txt-holder">
+                                    <input type="text" placeholder="E-mail Address">
+                                </div>
+                                <div class="txt-holder">
+                                    <input type="text" placeholder="Telephone No.">
+                                </div>
+                                <div class="half-input">
+                                   <div class="col">
+                                        <div class="txt-holder">
+                                            <input type="text" placeholder="First Name">
+                                        </div>
+                                   </div>
+                                    <div class="col">
+                                        <div class="txt-holder">
+                                            <input type="text" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt-holder">
+                                    <input type="text" placeholder="Address Line 1">
+                                </div>
+                                <div class="txt-holder">
+                                    <input type="text" placeholder="Address Line 2">
+                                </div>
+                                <div class="half-input">
+                                    <div class="col">
+                                        <div class="txt-holder">
+                                            <select class="sel">
+                                                <option selected="selected" value="Country">Country</option>
+                                                <option  value="Rus">Rus</option>
+                                                <option  value="Eng">Eng</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                     <div class="col">
+                                        <div class="txt-holder">
+                                            <select class="sel">
+                                                <option selected="selected" value="State">State</option>
+                                                <option value="US">USA</option>
+                                                <option value="UA">UA</option>
+                                            </select>
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="half-input">
+                                    <div class="col">
+                                        <div class="txt-holder">
+                                            <input type="text" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="txt-holder">
+                                            <input type="text" placeholder="Zip/Postal Code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" id="ship-adress">
+                            </div><!-- step-one -->
+                            <label for="ship-adress">My Shipping Address is same as Billing address</label>
+                        </div>
+                        <div class="ship-info">
+                            <h2><span class="number">2.</span>Shipping Information</h2>
+                            <div class="ship-info-txt">
+                                <p>The Parcel will be delivered to your Billing Address</p>
+                            </div>
+                        </div><!-- ship-info -->
+                    </div>
+                    <div class="shipping-method ship-section">
+                        <h2><span class="number">3.</span>Shipping Method</h2>
+                        <span>Please select how you would like to receive your products.</span>
+                        <select class="sel">
+                            <option selected="selected" value="Standard-Shipping">Standard Shipping (5 Days Delivery)</option>
+                            <option value="NotStandard-Shipping">NotStandard Shipping (10 Days Delivery)</option>
+                            <option value="Premium-Standard-Shipping">Pro Standard Shipping (1 Days Delivery)</option>
+                        </select>
+                    </div><!-- shipping-method -->
+                    <div class="payment-method ship-section">
+                        <h2><span class="number">4.</span>Payment Method</h2>
+                        <div class="radio-holder">
+                            <div class="row-single">
+                                <input type="radio" name="banking" id="mcard">
+                                <label for="mcard">Master Card</label>
+                            </div>
+                            <div class="row-single">
+                                <input type="radio" name="banking" id="visa">
+                                <label for="visa">Visa</label>
+                            </div>
+                            <div class="row-single">
+                                <input type="radio" name="banking" id="netbank">
+                                <label for="netbank">Net Banking</label>
+                            </div>
+                        </div>
+                        <span class="label-span">Select your bank</span>
+                        <select class="sel">
+                            <option value="">
+                                <option value="pb">PrivatBank</option>
+                                <option value="mer">Mercurial</option>
+                                <option value="gg">GoldenGate</option>
+                            </option>
+                        </select>
+                    </div><!-- payment-method -->
+                    <div class="save-and-sign ship-section">
+                        <div class="check-holder">
+                            <input type="checkbox" id="sign-mail">
+                            <label for="sign-mail">Sign-up to receive occasional newsletter about new products, news and promotions</label>
+                        </div>
+                        <div class="check-holder">
+                            <input type="checkbox" id="save-details">
+                            <label for="save-details">Save my details for faster checkout next time</label>
+                        </div>
+                    </div><!-- save-and-sign -->
+                    <div class="login-holder">
+                        <span class="nick-holder">Login Next time using <a class="nick-username" href="#">chirag9@gmail.com</a> as username</span>
+                        <div class="half-input">
+                            <div class="col">
+                                <div class="txt-holder">
+                                    <input type="password" required placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="txt-holder">
+                                    <input type="password" required placeholder="Password again">
+                                </div>
+                            </div>
+                            <a class="sucess-btn" href=""></a>
+                        </div>
+                        <a href="#" class="btn">Proceed To Pay</a>
+                    </div><!-- login-holder -->
+                </div><!-- order-form -->
+                <div class="order-information">
+                    <a class="cont-shop" href="#">Continue Shopping</a>
+                    <div class="order-desk">
+                        <table width="100%" class="order-check">
+                            <thead>
+                                <tr>
+                                    <th>Your Order Information</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>Order Total</td>
+                                    <td></td>
+                                    <td>$565.00</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>                                                    
+                                <tr class="title-table">
+                                    <td>Item</td>
+                                    <td>Qty</td>
+                                    <td>Sub-Total</td>
+                                </tr>
+                                <tr>
+                                    <td>501 Levis strauss Denim XL size Stone washed</td>
+                                    <td>1</td>
+                                    <td>$3450.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben Sherman Polka Dots blazer XL size</td>
+                                    <td>3</td>
+                                    <td>$3450.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben Sherman Polka Dots blazer XL size</td>
+                                    <td>3</td>
+                                    <td>$3450.00</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Shipping Cost</td>
+                                    <td>$5.00</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>VAT (17.5%)</td>
+                                    <td>$5.00</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Discount</td>
+                                    <td>$5.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!-- shipping-info -->
+            <footer>
+             <div class="copyright">
+                 <strong class="logo">
+                     <a href="">JADEBLUE</a>
+                 </strong>
+                 <span>Copyright © 2013 JADEBLUE</span>
+             </div>
+            </footer><!-- footer -->
+        </div><!-- wrapper -->
+    </div><!-- page -->
+</body>
+</html>
