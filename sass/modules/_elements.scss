@@ -88,7 +88,13 @@ ul.breadcrumbs{
 .lead-list{
 	text-transform: uppercase;
 	font-family: $font-bold;
-	color:$color-link-black;	
+	color:$color-link-black;
+
+	a{
+		color:inherit;
+		font-family: inherit;
+		text-transform: inherit;
+	}	
 }
 /*borders*/
 $border-bot:1px solid $color-border;

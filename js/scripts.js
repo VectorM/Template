@@ -104,7 +104,12 @@ $(document).ready(function() {
   $(function() {
      $( "#tabs" ).tabs();
    });  
-
+  $('strong.lead-list').on('click', function(){
+      $('strong.lead-list').removeClass('active');
+      $(this).addClass('active');
+      $('.f-nav-holder ul').slideUp();
+      $(this).next().slideToggle();
+  });
 
 });
 

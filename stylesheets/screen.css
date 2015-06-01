@@ -166,6 +166,11 @@ ul.breadcrumbs li a {
   font-family: "open_sansbold", Arial, Helvetica, sans-serif;
   color: #2a2a2a;
 }
+.lead-list a {
+  color: inherit;
+  font-family: inherit;
+  text-transform: inherit;
+}
 
 /*borders*/
 /*buttons*/
@@ -676,6 +681,7 @@ h2 span {
   text-align: center;
 }
 .column-holder ul li a {
+  display: block;
   height: 100%;
   overflow: hidden;
 }
@@ -802,35 +808,38 @@ footer:after {
   display: block;
   clear: both;
 }
-footer nav.footer_nav {
+footer nav.footer-nav {
   float: left;
   width: 70%;
 }
-footer nav.footer_nav ul {
+footer nav.footer-nav .f-nav-holder {
   padding-left: 5%;
   float: left;
 }
-footer nav.footer_nav ul li {
+footer nav.footer-nav .f-nav-holder:first-child {
+  padding-left: 0;
+}
+footer nav.footer-nav ul li {
   padding: 2% 0;
   color: #2a2a2a;
 }
-footer nav.footer_nav ul:first-child {
+footer nav.footer-nav ul:first-child {
   padding-left: 0;
   font-family: "open_sansbold", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-footer nav.footer_nav ul:first-child li {
+footer nav.footer-nav ul:first-child li {
   color: inherit;
   font-family: inherit;
   text-transform: inherit;
 }
-footer nav.footer_nav .social-link li {
+footer nav.footer-nav .social-link li {
   padding-left: 5px;
 }
-footer nav.footer_nav .social-link li:first-child {
+footer nav.footer-nav .social-link li:first-child {
   padding-left: none;
 }
-footer nav.footer_nav .social-link li.lead-list {
+footer nav.footer-nav .social-link li.lead-list {
   float: none;
 }
 
@@ -1634,6 +1643,7 @@ aside .aside-box span.lead-list {
 }
 
 .gallery-txt h1 {
+  max-width: 250px;
   font-size: 61px;
   padding-bottom: 14px;
   line-height: 40px;
@@ -2344,23 +2354,50 @@ aside .aside-box span.lead-list {
     page-break-after: avoid;
   }
 }
-@media screen and (max-width: 921px) {
+@media screen and (max-width: 320px) {
   #wrapper {
-    width: 286px;
+    width: 282px;
     overflow: hidden;
+  }
+
+  .not-mobile {
+    display: none;
+  }
+
+  .temp-block {
+    display: block !important;
   }
 
   header .left-header {
     display: none;
   }
-  header .right-header {
+  header .right-header a {
+    display: none;
+  }
+  header .right-header .cart-trigger {
+    text-indent: -999px;
+    background: url(../images/basket-icon.png) no-repeat;
+    display: block;
+    width: 37px;
+    height: 33px;
+  }
+  header .right-header .cart-trigger img {
     display: none;
   }
   header .header-bar {
     border-bottom: none;
   }
   header strong.logo {
-    margin: 0 auto;
+    position: absolute;
+    left: 70px;
+  }
+  header .navbar {
+    position: absolute;
+    top: 32px;
+  }
+
+  .headline {
+    display: none;
   }
 
   .mobile-adaptive ul {
@@ -2372,14 +2409,108 @@ aside .aside-box span.lead-list {
     float: left;
   }
 
+  .product-detail {
+    background: none;
+  }
+  .product-detail #sync2 {
+    display: none !important;
+  }
+
+  .product-gallery,
+  .product-info {
+    padding: 0;
+    width: 100%;
+  }
+
+  .product-info .select-area {
+    min-width: 171px !important;
+  }
+  .product-info .btn {
+    width: 100%;
+    overflow: hidden;
+    padding: 3px 0 !important;
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
   #gallery .owl-controls {
     display: none !important;
   }
-  #gallery .gallery-txt {
+  #gallery .gallery-txt h1 {
+    font-size: 30px;
+  }
+  #gallery .item .btn {
+    padding: 8px 9px 7px;
+    min-width: 66px;
+    position: absolute;
+    right: 95px;
+    bottom: 11px;
+  }
+
+  .column-holder ul {
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .column-holder ul li {
+    width: 137px;
+  }
+  .column-holder ul li img {
+    width: 100%;
+  }
+
+  .column-holder.three ul li {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .column-holder.three ul li:first-child span {
+    text-align: left;
+  }
+  .column-holder.three ul li a span {
+    top: 83px;
+    left: 24px;
+  }
+
+  .signup-holder {
     display: none;
   }
-  #gallery .btn {
-    padding: 8px 9px 7px;
-    min-height: 66px;
+
+  footer nav.footer-nav {
+    width: 100%;
+    border-bottom: 8px solid #ddd;
+  }
+  footer nav.footer-nav .f-nav-holder {
+    padding-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+  footer nav.footer-nav .f-nav-holder:first-child {
+    border-top: none;
+  }
+  footer nav.footer-nav .f-nav-holder strong.lead-list {
+    cursor: pointer;
+    display: block;
+    background: url(../images/acc-on.png) 95% 50% no-repeat;
+  }
+  footer nav.footer-nav .f-nav-holder strong.lead-list.active {
+    background: url(../images/acc-off.png) 95% 50% no-repeat;
+  }
+  footer nav.footer-nav .f-nav-holder ul {
+    display: none;
+  }
+  footer .copyright {
+    width: 100%;
+    text-align: center;
+    float: none;
+    padding-left: 0;
+  }
+  footer .copyright .logo {
+    display: none;
+  }
+  footer .copyright span {
+    text-align: inherit;
+  }
+  footer .f-nav-holder.social {
+    display: none;
   }
 }

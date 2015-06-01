@@ -1,21 +1,49 @@
-@media screen and (max-width:921px) {
+@media screen and (max-width:320px) {
 	#wrapper{
-		width: 286px;
+		width: 282px;
 		overflow: hidden;
+	}
+	.not-mobile{
+		display: none;
+	}
+	.temp-block{
+		display: block !important;
 	}
 	header{
 		.left-header{
 			display: none;
 		}
 		.right-header{
-			display: none;
+
+			a{
+				display: none;
+			}
+			.cart-trigger{
+				text-indent: -999px;
+				background: url(../images/basket-icon.png) no-repeat;
+				display: block;
+				width: 37px;
+				height: 33px;
+
+				img{
+					display:none;
+				}
+			}
 		}
 		.header-bar{
 			border-bottom: none;
 		}
 		strong.logo{
-			margin: 0 auto;
+			position: absolute;
+			left: 70px;
 		}
+		.navbar{
+			position: absolute;
+			top: 32px;
+		}
+	}
+	.headline{
+		display: none;
 	}
 	.mobile-adaptive ul{
 		display: none;
@@ -24,17 +52,133 @@
 		display: block;
 		float: left;
 	}
+	.product-detail{
+		background: none;
+
+		#sync2{
+			display: none !important;
+		}
+	}
+	.product-gallery,
+	.product-info{
+		padding: 0;
+		width: 100%;
+	}
+	.product-info{
+		
+		.select-area{
+			min-width: 171px !important;
+		}
+		.btn{
+			width: 100%;
+			overflow: hidden;
+			padding:3px 0 !important;
+			width: 100%;
+			margin-left: 0 !important;
+		}
+	}
 	#gallery{
 
 		.owl-controls{
 			display: none !important;
 		}
 		.gallery-txt{
-			display: none;
+
+			h1{
+				font-size: 30px;
+			}
 		}
-		.btn{
-			padding:8px 9px 7px;
-			min-height: 66px;
+		.item{
+
+			.btn{
+				padding:8px 9px 7px;
+				min-width: 66px;
+				position: absolute;
+				right: 95px;
+				bottom: 11px;
+			}
+		}
+	}
+	.column-holder{
+		ul{
+			-webkit-flex-flow: row wrap;
+			justify-content: space-around;
+			
+			li{
+				width: 137px;
+			
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.column-holder.three{
+		
+		ul{
+
+			li{
+				width: 100%;
+				margin-bottom: 18px;
+				
+				&:first-child span{
+					text-align: left;
+				}
+
+				a{
+					span{
+						top: 83px;
+						left: 24px;
+					}
+				}
+			}
+		}
+	}
+	.signup-holder{
+		display: none;
+	}
+	footer{
+		nav.footer-nav{
+			width: 100%;
+			border-bottom: 8px solid $color-border;
+
+			.f-nav-holder{
+			 padding-left: 0;
+			 margin-bottom: 10px;
+			 width: 100%;
+			 border-top: $border-bot;
+			
+			&:first-child{
+				border-top: none;
+			}
+			 	strong.lead-list{
+			 		cursor: pointer;
+			 		display: block;
+			 		background: url(../images/acc-on.png) 95% 50% no-repeat;
+			 	}
+			 	strong.lead-list.active{
+			 		background: url(../images/acc-off.png) 95% 50% no-repeat;
+			 	}
+				ul{
+					display: none;
+				}
+			}
+		}
+		.copyright{
+			width: 100%;
+			text-align: center;
+			float: none;
+			padding-left: 0;
+			
+			.logo{
+				display: none;
+			}
+			span{
+				text-align: inherit;
+			}
+		}
+		.f-nav-holder.social{
+			display: none;
 		}
 	}
 }
