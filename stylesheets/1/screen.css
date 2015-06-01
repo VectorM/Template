@@ -298,30 +298,6 @@ ul.breadcrumbs li a {
   color: #010101;
   font-weight: bold;
 }
-.drop .drop-info-holder .btn {
-  width: 100%;
-  padding: 8px 0;
-  margin-bottom: 14px;
-}
-.drop .drop-info-holder .btn:hover {
-  background: #2a2a2a;
-}
-.drop .drop-info-holder .cont-shop {
-  margin-left: 45px;
-  padding-right: 17px;
-  background: url(../images/bag-icon.png) 100% 50% no-repeat;
-}
-
-.cross-line {
-  display: none;
-}
-
-.cross-line {
-  display: none;
-  background: url(../images/mob-adaptive-bg.png) no-repeat;
-  width: 37px;
-  height: 33px;
-}
 
 .item-card {
   border-bottom: 1px solid #ddd;
@@ -1263,6 +1239,10 @@ aside .aside-box span.lead-list {
   width: 30%;
   padding-left: 3%;
   float: left;
+}
+.order-information .cont-shop {
+  padding-right: 17px;
+  background: url(../images/bag-icon.png) 100% 50% no-repeat;
 }
 .order-information .order-desk {
   margin-top: 11px;
@@ -2344,42 +2324,68 @@ aside .aside-box span.lead-list {
     page-break-after: avoid;
   }
 }
-@media screen and (max-width: 921px) {
-  #wrapper {
-    width: 286px;
-    overflow: hidden;
+@media screen and (max-width: 768px) {
+  .page {
+    width: 768px;
   }
 
-  header .left-header {
-    display: none;
+  header {
+    position: relative;
+    z-index: 2;
   }
-  header .right-header {
-    display: none;
-  }
-  header .header-bar {
-    border-bottom: none;
-  }
-  header strong.logo {
-    margin: 0 auto;
-  }
-
-  .mobile-adaptive ul {
-    display: none;
-  }
-
-  .cross-line {
-    display: block;
+  header .navbar {
+    width: 25%;
+    background: #fff;
+    padding: 0 0 9999px;
+    margin: 0 0 -9999px;
+    background: #fff;
     float: left;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #f00;
+  }
+  header .navbar ul li {
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    text-align: center;
+  }
+  header .navbar ul li a {
+    display: inline-block;
+  }
+  header .logotype {
+    float: right;
+    width: 300px;
+    height: 100px;
+    margin-right: 150px;
+  }
+  header .mobile-trigger:hover .navbar {
+    display: block;
+  }
+  header .menu-show {
+    display: block;
+  }
+  header .menu-show:hover + nav.navbar {
+    display: block;
   }
 
-  #gallery .owl-controls {
-    display: none !important;
+  .tabs section {
+    padding: 7px;
+    width: 525px;
   }
-  #gallery .gallery-txt {
-    display: none;
+
+  .column-holder div ol li .list-item-before,
+  .column-holder div ol li:before {
+    margin: 16px 0 -30px 272px;
   }
-  #gallery .btn {
-    padding: 8px 9px 7px;
-    min-height: 66px;
+
+  .column-holder {
+    display: block;
+  }
+  .column-holder div {
+    margin: 20px 0;
+    width: 100%;
   }
 }

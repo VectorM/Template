@@ -1,73 +1,40 @@
-@media screen and (max-width:768px) {
-	.page{
-		width: 768px;
+@media screen and (max-width:921px) {
+	#wrapper{
+		width: 286px;
+		overflow: hidden;
 	}
-
 	header{
-		position: relative;
-		z-index: 2;
-	
-		.navbar{
-			width: 25%;
-			background: #fff;
-			padding: 0 0 9999px;
-			margin: 0 0 -9999px;
-			background: #fff;
-			float: left;
+		.left-header{
 			display: none;
-			position: absolute;
-			top:0;
-			left: 0; 
-			border: 1px solid #f00;
-
-
-			ul{
-
-				li{
-					width: 100%;
-					padding: 0;
-					margin: 5px 0;
-					text-align: center;
-					a{
-						display: inline-block;
-					}
-				}
-			}
 		}
-		.logotype{
-			float: right;
-			width: 300px;
-			height: 100px;
-			margin-right: 150px;
+		.right-header{
+			display: none;
 		}
-		.mobile-trigger:hover{
-			.navbar {
-				display: block;
-			}
+		.header-bar{
+			border-bottom: none;
 		}
-		.menu-show{
-			display: block;
-
-			&:hover + nav.navbar{
-				display: block;
-			}
+		strong.logo{
+			margin: 0 auto;
 		}
 	}
-	.tabs section{
-		padding: 7px;
-		width: 525px;
+	.mobile-adaptive ul{
+		display: none;
 	}
-	.column-holder div ol li .list-item-before, 
-	.column-holder div ol li:before{
-		margin: 16px 0 -30px 272px;
-	}
-	.column-holder{
-		
+	.cross-line{
 		display: block;
+		float: left;
+	}
+	#gallery{
 
-		div{
-			margin:20px 0;
-			width: 100%;
+		.owl-controls{
+			display: none !important;
+		}
+		.gallery-txt{
+			display: none;
+		}
+		.btn{
+			padding:8px 9px 7px;
+			min-height: 66px;
 		}
 	}
 }
